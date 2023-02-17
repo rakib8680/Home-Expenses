@@ -6,3 +6,11 @@ function getExpensesValue(byID) {
     const fieldsValue = parseFloat(fieldsValueString);
     return fieldsValue;
 }
+
+
+
+
+// const total = 570;
+// const b = 8;
+// const result = Math.round((b / 100) * total);
+// console.log(result);

@@ -11,8 +11,6 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
 
 
 
-
-
     // get expense field amounts 
     const foodFieldValue = getExpensesValue('food-field');
     const rentFieldValue = getExpensesValue('rent-field');
@@ -21,9 +19,21 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
     // calculate total expense 
     const totalExpense = foodFieldValue + rentFieldValue + clothesFieldValue;
 
-
     // add total expense value to total expense element 
     const totalExpenseElement = document.getElementById('total-expense');
     totalExpenseElement.innerText = totalExpense;
 
+
+
+    // remove total expense amount from total income 
+    const remainingIncome = incomeFieldAmount - totalExpense;
+
+    // set remaining income to Balance element
+    const remainingBalanceElement = document.getElementById('balance');
+    remainingBalanceElement.innerText = remainingIncome;
+
+
 })
+
+
+// add event handler to Save button 
