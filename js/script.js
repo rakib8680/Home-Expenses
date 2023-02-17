@@ -5,10 +5,8 @@
 document.getElementById('calculate-btn').addEventListener('click', function () {
 
     // get total income 
-    const incomeField = document.getElementById('income-field');
-    const incomeFieldString = incomeField.value;
-    const incomeFieldAmount = parseFloat(incomeFieldString);
-
+    const incomeFieldAmount = getElementsValue('income-field');
+    console.log(incomeFieldAmount);
 
 
     // get expense field amounts 
@@ -21,7 +19,6 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
     const totalExpense = foodFieldValue + rentFieldValue + clothesFieldValue;
     // add total expense value to total expense element 
     setInnerText('total-expense', totalExpense);
-
 
 
     // remove total expense amount from total income 
