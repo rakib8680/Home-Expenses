@@ -6,7 +6,6 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
 
     // get total income 
     const incomeFieldAmount = getElementsValue('income-field');
-    console.log(incomeFieldAmount);
 
 
     // get expense field amounts 
@@ -33,10 +32,16 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
 // add event handler to Save button 
 document.getElementById('save-btn').addEventListener('click', function () {
 
+    // total amount 
+    const incomeFieldAmount = getElementsValue('income-field');
     // get value from save input Field 
     const saveInputField = getElementsValue('save-field');
-    
 
 
+    // get percentage 
+    const percentageAmount = getPercentage(incomeFieldAmount, saveInputField);
+
+    // set percentage Amount to saving amount element 
+    setInnerText('saving-amount', percentageAmount);
 
 })

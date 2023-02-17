@@ -15,7 +15,15 @@ function setInnerText(element, value) {
 }
 
 
-// const total = 570;
+
+// calculate percentage 
+function getPercentage(totalIncome, percentAmount) {
+    const percentage = Math.round((percentAmount / 100) * totalIncome);
+    return percentage;
+}
+
+
+// const a = 570;
 // const b = 8;
-// const result = Math.round((b / 100) * total);
+// const result = Math.round((b / 100) * a);
 // console.log(result);
