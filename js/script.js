@@ -44,4 +44,14 @@ document.getElementById('save-btn').addEventListener('click', function () {
     // set percentage Amount to saving amount element 
     setInnerText('saving-amount', percentageAmount);
 
+    // get remaining income 
+    const remainingIncome = getElementsInnerText('balance');
+
+    // remove percentageAmount from remainingIncome 
+    const finalRemainingBalance = remainingIncome - percentageAmount;
+    
+
+    setInnerText('remaining-balance', finalRemainingBalance);
+
+
 })

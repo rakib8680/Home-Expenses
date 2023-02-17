@@ -1,10 +1,21 @@
 
-// expenses function 
+
+
+// get value from input field and convert to INT
 function getElementsValue(byID) {
     const amountFields = document.getElementById(byID);
-    const fieldsValueString = amountFields.value
+    const fieldsValueString = amountFields.value;
     const fieldsValue = parseInt(fieldsValueString);
     return fieldsValue;
+}
+
+
+// get innerText from element and convert to INT 
+function getElementsInnerText(byID) {
+    const innerTextValue = document.getElementById(byID);
+    const elementInnerTextString = innerTextValue.innerText;
+    const elementInnerText = parseInt(elementInnerTextString);
+    return elementInnerText;
 }
 
 
@@ -23,7 +34,3 @@ function getPercentage(totalIncome, percentAmount) {
 }
 
 
-// const a = 570;
-// const b = 8;
-// const result = Math.round((b / 100) * a);
-// console.log(result);
