@@ -1,13 +1,18 @@
 
 // expenses function 
-function getExpensesValue(byID) {
+function getElementsValue(byID) {
     const amountFields = document.getElementById(byID);
     const fieldsValueString = amountFields.value
-    const fieldsValue = parseFloat(fieldsValueString);
+    const fieldsValue = parseInt(fieldsValueString);
     return fieldsValue;
 }
 
 
+// set innerText 
+function setInnerText(element, value) {
+    const previousElementText = document.getElementById(element);
+    previousElementText.innerText = value;
+}
 
 
 // const total = 570;
